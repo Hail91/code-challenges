@@ -20,20 +20,30 @@
 //   }
 // }
 
+// Helper function for switch implementation
+function multiple(num, modulo) {
+  return num % modulo === 0;
+}
+// Even this implementation can be improved by adding a helper function instead of hardcoding values in like 3, 5, or 3 && 5.
 function fizzBuzz() {
-  let result = "";
-
   for (let i = 1; i <= 100; i++) {
+    let result = "";
     switch (true) {
-      case i % 3 === 0 && i % 5 === 0:
+      case multiple(i, 15):
         result += "FizzBuzz";
-      case i % 3 === 0:
+        break;
+      case multiple(i, 3):
         result += "Fizz";
-      case i % 5 === 0:
+        break;
+      case multiple(i, 5):
         result += "Buzz";
+        break;
+      default:
+        result = i;
+        break;
     }
+    console.log(result);
   }
-  console.log(i, result);
 }
 
 console.log(fizzBuzz());
