@@ -1,5 +1,4 @@
 // Determine whether or not a string is a palindrome or not.
-
 function isPalindrome(string) {
   // Convert string to lowercase to account for potential mixed casing
   string = string.toLowerCase();
