@@ -1,5 +1,4 @@
 // Return total num of integers from nums array whose total number of digits is even only.
-
 const findNumbers = function (nums) {
   // variable to hold number of even digited nums
   let resNum = 0;
