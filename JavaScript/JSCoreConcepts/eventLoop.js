@@ -1,7 +1,7 @@
 // Event Loop example in JavaScript
 function eventLoopExample() {
   console.log("alpha");
-  setTimeout(console.log("beta"), 0);
+  setTimeout(() => console.log("beta"), 0);
   console.log("gamma");
 }
 
