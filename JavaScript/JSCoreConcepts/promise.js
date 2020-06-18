@@ -16,3 +16,20 @@ Practice.then((result) => {
 }).catch((error) => {
   console.log(error);
 });
+
+// Example of Promise.all()
+const stepOne = new Promise((resolve, reject) => {
+  resolve("Step one complete!");
+});
+
+const stepTwo = new Promise((resolve, reject) => {
+  resolve("Step Two complete!");
+});
+
+const stepThree = new Promise((resolve, reject) => {
+  resolve("Step Three complete!");
+});
+// Promise.all() will accept an array of promises, and then resolve each one returning an array of resolved values.
+Promise.all([stepOne, stepTwo, stepThree]).then((output) => {
+  console.log(output);
+});
