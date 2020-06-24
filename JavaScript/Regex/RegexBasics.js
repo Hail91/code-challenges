@@ -38,3 +38,33 @@
 // let quoteSample = "The five boxing wizards jump quickly.";
 // let alphabetRegexV2 = /\w/g;
 // let result = quoteSample.match(alphabetRegexV2).length;
+
+// ** Match Everything But Letters and Numbers **
+
+// let quoteSample = "The five boxing wizards jump quickly.";
+// let nonAlphabetRegex = /\W/g;
+// let result = quoteSample.match(nonAlphabetRegex).length;
+
+// ** Match All Numbers **
+
+// let movieName = "2001: A Space Odyssey";
+// let numRegex = /\d/g;
+// let result = movieName.match(numRegex).length;
+
+// ** Match All Non-Numbers **
+
+// let movieName = "2001: A Space Odyssey";
+// let noNumRegex = /\D/g;
+// let result = movieName.match(noNumRegex).length;
+
+// ** Restrict Possible Usernames **
+
+// let username = "JackOfAllTrades";
+// let userCheck = /^[a-z]([0-9][0-9]+|[a-z]+\d*)$/i;
+// let result = userCheck.test(username);
+
+// ** Match Whitespace **
+
+// let sample = "Whitespace is important in separating words";
+// let countWhiteSpace = /\s/g;
+// let result = sample.match(countWhiteSpace);
