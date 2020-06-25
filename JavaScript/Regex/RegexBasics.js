@@ -68,3 +68,33 @@
 // let sample = "Whitespace is important in separating words";
 // let countWhiteSpace = /\s/g;
 // let result = sample.match(countWhiteSpace);
+
+// ** Match Non-Whitespace Characters **
+
+// let sample = "Whitespace is important in separating words";
+// let countNonWhiteSpace = /\S/g;
+// let result = sample.match(countNonWhiteSpace);
+
+// ** Specify Only the Lower Number of Matches **
+
+// let haStr = "Hazzzzah";
+// let haRegex = /Haz{4,}ah/;
+// let result = haRegex.test(haStr);
+
+// ** Specify Exact Number of Matches **
+
+// let timStr = "Timmmmber";
+// let timRegex = /Tim{4}ber/;
+// let result = timRegex.test(timStr);
+
+// ** Check for All or None **
+
+// let favWord = "favorite";
+// let favRegex = /favou?rite/;
+// let result = favRegex.test(favWord);
+
+// ** Check For Mixed Grouping of Characters **
+
+// let myString = "Eleanor Roosevelt";
+// let myRegex = /(Franklin|Eleanor).*Roosevelt/;
+// let result = myRegex.test(myString);
