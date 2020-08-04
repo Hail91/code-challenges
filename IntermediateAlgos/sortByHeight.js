@@ -23,5 +23,16 @@ function sortByHeight(a) {
   }
   return a;
 }
+// ** Better more concise solution **
+// function sortByHeight(a) {
+//     var s = a.filter(h => h > 0).sort((a, b) => a - b)
+//     return a.map(p => {
+//         if (p !== -1) {
+//             return s.shift();
+//         }
+
+//         return -1;
+//     })
+// }
 
 console.log(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]));
