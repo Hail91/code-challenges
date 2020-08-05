@@ -8,9 +8,11 @@ function kthLargestElement(nums, k) {
   }
   // Otherwise, continue with our logic to remove and check
   while (count < k - 1) {
-    nums.splice(nums.indexOf(maxVal), 1);
+    nums.splice(nums.indexOf(maxVal), 1); // Removing the current largest element
     maxVal = Math.max(...nums);
     count += 1;
   }
   return Math.max(...nums);
 }
+
+console.log(kthLargestElement([7, 4, 2, 8, 10, 1, 17, 3], 3));
