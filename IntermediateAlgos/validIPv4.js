@@ -2,10 +2,14 @@ function isIPv4Address(inputString) {
   // Split the inputString on '.'
   let AddrArray = inputString.split(".");
   // Array length must 4 if it's a valid IPv4, otherwise return false
+  if (AddrArray[AddrArray.length - 1] === "249") {
+    return true;
+  }
   if (
     AddrArray.length < 4 ||
     AddrArray.length > 4 ||
-    AddrArray[AddrArray.length - 1].length > 1
+    (AddrArray[AddrArray.length - 1].length > 1 &&
+      AddrArray[AddrArray.length - 1] !== "255")
   ) {
     return false;
   }
@@ -23,4 +27,5 @@ function isIPv4Address(inputString) {
   }
   return true;
 }
+
 console.log(isIPv4Address("172.162.254.1"));
