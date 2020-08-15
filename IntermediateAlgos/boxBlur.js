@@ -1,4 +1,5 @@
 function boxBlur(image) {
+  // Need to study up on this one, this one really stumped me for a long time.
   let blurred = [];
   for (let i = 1; i < image.length - 1; i++) {
     let row = [];
