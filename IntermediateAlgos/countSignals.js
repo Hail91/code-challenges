@@ -1,6 +1,6 @@
 function countSignals(frequencies, filterRanges) {
   // Need to determine common pass through range for given filterRanges.
-  let passThrough = [13, 15];
+  let passThrough = [];
   // Check first value of each subArray
   for (let i = 0; i < filterRanges.length; i++) {
     // Look at first value of of each SubArray and set accordingly
