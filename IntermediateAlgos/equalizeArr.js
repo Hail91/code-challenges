@@ -1,3 +1,4 @@
+// Time Complexity for this algorithm I believe is
 function equalizeArray(arr) {
   // Initialize Hashtable
   const occurrences = {};
