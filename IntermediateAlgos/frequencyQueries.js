@@ -5,7 +5,6 @@ function frequencyQueries(queries) {
   for (let i = 0; i < queries.length; i++) {
     if (queries[i][0] === 1) {
       // Insert
-      collection.push(queries[i][1]);
       if (!(queries[i][1] in hashtable)) {
         hashtable[queries[i][1]] = 1;
       } else {
@@ -23,7 +22,7 @@ function frequencyQueries(queries) {
       if (Object.values(hashtable).includes(queries[i][1])) {
         collection.push(1);
       } else {
-        HTMLAllCollection.push(0);
+        collection.push(0);
       }
     }
   }
