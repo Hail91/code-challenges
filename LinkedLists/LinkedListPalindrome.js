@@ -1,8 +1,9 @@
 var isPalindrome = function (head) {
   // 1 --> 2 --> 2 --> 1 <-- Example Linked List
+  // H
   const helperArr = [];
-  let slow = head,
-    fast = head;
+  let slow = head; // 1
+  let fast = head; // 1
 
   while (fast && fast.next) {
     helperArr.push(slow.val);
