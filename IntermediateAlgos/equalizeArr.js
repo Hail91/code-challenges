@@ -1,8 +1,10 @@
-// Time Complexity for this algorithm I believe is
+// Time Complexity: O(n)
+// Space Complexity: O(n^2) <--- Input size will use linear space, but the occurrences hashmap will also use linear space based on
+// the input size of arr.
+
 function equalizeArray(arr) {
-  // Initialize Hashtable
-  const occurrences = {};
-  let deletions = 0;
+  const occurrences = {}; // Size of occurrences will depend on length of input arr, so this is using O(n) space.
+  let deletions = 0; // Constant space, O(1)
   // Populate Hashtable with number of occurrences by traversing input array.
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] in occurrences) {

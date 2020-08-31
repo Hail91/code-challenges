@@ -1,3 +1,9 @@
+// Space Complexity --> Auxillary space I believe is O(1) since we shouldn't be using more space even if the input size increases.
+// Also, the space taken up by the input size should be O(n), given that...I'd expect total space complexity being O(n).
+
+// Time Complexity: I believe the time complexity for this is O(n) as the runtime should be directly proportional to the input size.
+// (Either frequencies or filterRanges)
+
 function countSignals(frequencies, filterRanges) {
   // Need to determine common pass through range for given filterRanges.
   let passThrough = [];
