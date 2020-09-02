@@ -4,9 +4,11 @@
 // Time Complexity: I believe the time complexity for this is O(n) as the runtime should be directly proportional to the input size.
 // (Either frequencies or filterRanges)
 
+// Input size mem usage + Auxillary
+
 function countSignals(frequencies, filterRanges) {
   // Need to determine common pass through range for given filterRanges.
-  let passThrough = [];
+  let passThrough = []; // O(1)
   // Check first value of each subArray
   for (let i = 0; i < filterRanges.length; i++) {
     // Look at first value of of each SubArray and set accordingly

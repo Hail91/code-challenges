@@ -32,5 +32,4 @@ function equalizeArray(arr) {
   }
   return deletions;
 }
-
 console.log(equalizeArray([1, 2, 2, 3]));
