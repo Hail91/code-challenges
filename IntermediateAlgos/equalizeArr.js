@@ -15,7 +15,10 @@ function equalizeArray(arr) {
   }
   // Can Loop over Object values getting the maximum value
   for (let [key, value] of Object.entries(occurrences)) {
-    if (value < Math.max(...Object.values(occurrences))) {
+    if (
+      value < Math.max(...Object.values(occurrences)) ||
+      arr.length > Math.max(...Object.values(occurrences))
+    ) {
       while (arr.includes(Number(key))) {
         arr.splice(arr.indexOf(Number(key)), value);
         deletions += value;
@@ -25,4 +28,4 @@ function equalizeArray(arr) {
   return deletions;
 }
 
-console.log(equalizeArray([2, 2, 4, 4]));
+console.log(equalizeArray([1, 2, 2, 3]));
