@@ -1,3 +1,5 @@
+// Space complexity: O(n)
+// Time Complexity: O(n)
 function frequencyQueries(queries) {
   const collection = [];
   const hashtable = {};
