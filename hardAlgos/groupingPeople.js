@@ -1,4 +1,6 @@
-var groupThePeople = function (groupSizes) {
+// Function takes an array of integers, and will return a 2D array containing nested subArrays that contain each index of
+// GroupSizes in a subArray of the exact length specified by the element at that particular index.
+const groupThePeople = function (groupSizes) {
   let arrayObj = {};
   let results = [];
   for (let i = 0; i < groupSizes.length; i++) {
