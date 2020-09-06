@@ -33,3 +33,13 @@ Z(); // Z() invoked the first time
 Z(); // Z() invoked the second time
 Z(); // Z() invoked the third time
 Y(); // Y() invoked the first time
+
+// Tricky Interview Question
+
+// const arr = [5, 10, 15, 20];
+
+// for (var i = 0; i < arr.length; i++) {
+//   setTimeout(function () {
+//     console.log("Index: " + i + ", element: " + arr[i]);
+//   }, 3000);
+// }
