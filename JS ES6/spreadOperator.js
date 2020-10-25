@@ -20,3 +20,5 @@ function spreadOut() {
 }
 
 console.log(spreadOut());
+
+// ** Need to google information about how spread really works under the hood. **
