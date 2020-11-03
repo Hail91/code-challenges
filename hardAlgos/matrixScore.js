@@ -1,4 +1,4 @@
-var matrixScore = function (A) {
+const matrixScore = function (A) {
   let score = 0;
   let newMatrix = A.map((e) => {
     if (e[0] === 0) {
