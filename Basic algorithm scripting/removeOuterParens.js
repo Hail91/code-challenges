@@ -26,10 +26,14 @@ var removeOuterParentheses = function (S) {
   }
   // Loop over Parens array and adjust S as needed
   for (let j = 0; j < parensArray.length - 1; j++) {
+    // Remove paren at logged location in parensArray
     newStr.splice(parensArray[j], 1);
+    // Add placeholder to maintain proper index positions in NewStr Array
     newStr.unshift("-");
   }
+  // Clean out the "-" placeholders
   newStr.splice(0, parensArray.length - 1);
+  // Return joined string
   return newStr.join("");
 };
 
