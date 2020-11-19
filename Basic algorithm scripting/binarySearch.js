@@ -1,8 +1,8 @@
 function binarySearch(array, target) {
-  return binarySearchHelp(array, target, 0, array.length - 1);
+  return binarySearchHelper(array, target, 0, array.length - 1);
 }
 
-function binarySearchHelp(array, target, left, right) {
+function binarySearchHelper(array, target, left, right) {
   while (left <= right) {
     const mid = Math.floor((left + right) / 2);
     const match = array[mid];
@@ -14,7 +14,7 @@ function binarySearchHelp(array, target, left, right) {
       left = mid + 1;
     }
   }
-  return -1;
+  return "Item not found!";
 }
 
-console.log(binarySearch([1, 5, 23, 111], 111));
+console.log(binarySearch([1, 5, 23, 111], 23));
