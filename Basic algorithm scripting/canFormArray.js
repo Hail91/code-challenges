@@ -28,4 +28,4 @@ const canFormArray = function (arr, pieces) {
   return true;
 };
 // Log output
-console.log(canFormArray([49, 18, 16], [[16, 18, 49]]));
+console.log(canFormArray([49, 18, 16], [[16], [49, 18]]));
