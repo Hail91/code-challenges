@@ -1,55 +1,52 @@
-const sortString = function (s) {
-  let count = 0;
-  let flipped = false;
-  let results = [];
-  // Need a variable 'result' to return
-  let charCodes = s.split("").map((char, idx) => {
-    return s.charCodeAt(idx);
-  });
-  charCodes = charCodes.sort((a, b) => a - b);
-  let smallest = Math.min(...charCodes);
-  let largest = Math.max(...charCodes);
-  // Loop over charCodes
-  while (count < s.length) {
-    if (flipped == false) {
-      results.push(smallest);
-      count += 1;
-      for (let i = 0; i < s.length; i++) {
-        // Check if current value is < than smallest, if not...move onto next
-        if (charCodes[i] <= smallest) {
-          continue;
-        } else {
-          results.push(charCodes[i]);
-          count += 1;
-          smallest = charCodes[i];
-        }
-      } // for loop ends here
-      if (results.length !== s.length) {
-        flipped = true;
-        smallest = Math.min(...charCodes);
-        if (flipped == true) {
-          results.push(largest);
-          count += 1;
-          for (let j = s.length - 1; j > 0; j--) {
-            // Check if current value is < than smallest, if not...move onto next
-            if (charCodes[j] >= largest) {
-              continue;
-            } else {
-              results.push(charCodes[j]);
-              count += 1;
-              largest = charCodes[j];
-            }
+/**
+* @param {string} s
+* @return {string}
+*/
+const sortString = function(s) {
+  s = s.split('').map((char, i) => {
+      return s.charCodeAt(i)
+  })
+  let output = []
+  let sorted = false;
+  let direction = 'F';
+  while(s.length > 0) {
+      if(direction === 'F') {
+          let currCharCode = Math.min(...s)
+          output.push(String.fromCharCode(currCharCode))
+          s.splice(s.indexOf(currCharCode), 1)
+          if(sorted == false) {
+            s = s.sort((a, b) => a - b) 
           }
-          flipped = false;
-          largest = Math.max(...charCodes);
-        }
+          sorted = true;
+          for(let i = 0; i < s.length; i++) {
+              if(s[i] <= currCharCode) continue;
+              else if(s[i] > currCharCode) {
+                  output.push(String.fromCharCode(s[i]))
+                  currCharCode = s[i]
+                  s.splice(s.indexOf(s[i]), 1)
+                  i -= 1
+              }
+          }
+          if(s.length > 0) {
+            direction = 'B';
+          }
       }
+      if(direction === 'B') {
+          let currCharCode = Math.max(...s)
+          output.push(String.fromCharCode(currCharCode))
+          s.splice(s.indexOf(currCharCode), 1)
+          for(let i = s.length - 1; i > 0 ; i--) {
+              if(s[i] >= currCharCode) continue;
+              else if(s[i] < currCharCode) {
+                  output.push(String.fromCharCode(s[i]))
+                  currCharCode = s[i]
+                  s.splice(s.indexOf(s[i]), 1)
+              }
+          } 
+      }
+      if(s.length > 0) direction = 'F';
     }
-  }
-  let final = results.map((c) => {
-    return String.fromCharCode(c);
-  });
-  return final.join("");
-};
+    return output.join("")
+  };
 
 console.log(sortString("leetcode"));
