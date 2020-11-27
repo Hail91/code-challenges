@@ -15,9 +15,9 @@
 
 // console.log(diStringMatch("DDI"));
 
+// ** Using pointers solution **
 const diStringMatch = function (S) {
   let result = [];
-  // Can do it all in one pass by setting beginning and end pointers in our loop
   for (let i = 0, start = 0, end = S.length; i <= S.length; i++) {
     if (S[i] === "I") {
       result.push(start++);
