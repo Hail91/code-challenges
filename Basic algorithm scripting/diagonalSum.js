@@ -1,4 +1,5 @@
-var diagonalSum = function (mat) {
+// Need to add comments for clarity to this solution next...
+const diagonalSum = function (mat) {
   let sum = 0;
   let left = 0;
   let right = mat[0].length - 1;
