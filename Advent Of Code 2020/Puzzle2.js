@@ -1,5 +1,41 @@
 function threeNumberSum(array, targetSum) {
-  // Solution here
+  // Sort Array (array needs to be sorted for this to work properly)
+  array.sort((a, b) => a - b);
+  // Establish an output array to store results
+  let output = [];
+  // Loop over array with the intention of find our first value (loop through until we reach a point where there are 3 values left)
+  for (let firstIndex = 0; firstIndex < array.length - 2; firstIndex++) {
+    let firstVal = array[firstIndex];
+    // Need to check if firstVal is greater than targetSum, return result since by this point we must have already found our triplet
+    if (firstVal > targetSum) return output;
+    // Establish second and third indexes to use
+    let secondIndex = firstIndex + 1; // Place in front of first index (We will increment this as necessary)
+    let thirdIndex = array.length - 1; // Start at the end of the array (We will decrement this as necessary)
+
+    // While loop to check sum of our indexes and increment/decrement as needed until we find our correct sum
+    while (secondIndex < thirdIndex) {
+      // Establish values to variables
+      let secondVal = array[secondIndex];
+      let thirdVal = array[thirdIndex];
+
+      // If all our values match our target, we'll just push.
+      if (firstVal + secondVal + thirdVal === targetSum) {
+        output.push([firstVal, secondVal, thirdVal]);
+      }
+      // Need if checks to determine the need to increment secondVal or decrement thirdVal.
+      if (firstVal + secondVal + thirdVal >= targetSum) {
+        while (array[thirdIndex - 1] === thirdVal) thirdIndex--;
+        thirdIndex--;
+      }
+      // Second check for thirdIndex
+      if (firstVal + secondVal + thirdVal <= targetSum) {
+        while (array[secondIndex + 1] === secondVal) secondIndex++;
+        secondIndex++;
+      }
+    }
+  }
+  output = output.flat();
+  return output.reduce((product, n) => product * n, 1);
 }
 
 console.log(
