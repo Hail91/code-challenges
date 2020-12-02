@@ -7,7 +7,7 @@ try {
     input.push(line);
   });
 } catch (error) {
-  console.log(error);
+  console.log(error, "Error reading from file!");
 }
 
 const validPassword = (passwords) => {
