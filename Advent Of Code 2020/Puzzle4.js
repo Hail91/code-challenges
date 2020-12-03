@@ -23,12 +23,12 @@ const SledPath = (map) => {
         treeCoords.push([rowPos, currRow, "X"]);
         trees += 1;
         rowPos = Math.abs(map[currRow][0].length - (rowPos + 3));
-        currRow += 2;
+        // currRow += 2;
         continue;
       } else {
         treeCoords.push([rowPos, currRow, "0"]);
         rowPos = Math.abs(map[currRow][0].length - rowPos + 3);
-        currRow += 2;
+        // currRow += 2;
         continue;
       }
     } else if (
