@@ -22,7 +22,7 @@ const SledPath = (right, map) => {
     // Increment stepNumber
     stepNumber += 1;
     // Use modulo to 'skip' back to the front of the row when we can't make another 3 steps to the right
-    let xPosition = (stepNumber * right) % width;
+    let xPosition = (stepNumber * right) % width; // 6 % 31
     // Check for a tree at xPosition in our map/hill
     if (map[row][xPosition] === "#") {
       trees += 1;
