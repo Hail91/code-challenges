@@ -23,17 +23,20 @@ const BinaryBoardingRow = (seatMap) => {
         start = Math.ceil((start + end) / 2);
       }
     }
-    if (seatMap[i][6] === "F")
+    if (seatMap[i][6] === "F") {
       rows.push(
         Math.min(...[start, end]) * 8 + BinaryBoardingColumn(seatMap[i])
       );
-    else
+      start = 0;
+      end = 127;
+    } else {
       rows.push(
         Math.max(...[start, end]) * 8 + BinaryBoardingColumn(seatMap[i])
       );
+      start = 0;
+      end = 127;
+    }
   }
-  start = 0;
-  end = 127;
 };
 
 // Calculate Column Number
@@ -52,4 +55,4 @@ const BinaryBoardingColumn = (string) => {
 };
 
 console.log(BinaryBoardingRow(input));
-console.log(rows);
+console.log(Math.max(...rows));
