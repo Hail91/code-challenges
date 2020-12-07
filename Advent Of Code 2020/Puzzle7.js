@@ -1,19 +1,18 @@
 const fs = require("fs");
-// const input = ["abc", "abc", "abac", "aaaa", "b"];
 const input = [];
 try {
   const data = fs.readFileSync("./inputs/Puzzle7Input.txt", "utf-8");
   const lines = data.split(/\r?\n/);
-  let tempStr = "";
+  let temp = [];
   for (let i = 0; i < lines.length; i++) {
     if (lines[i].length > 0) {
-      tempStr += lines[i];
+      temp.push(lines[i]);
     } else if (lines[i].length === 0) {
-      input.push(tempStr);
-      tempStr = "";
+      input.push(temp);
+      temp = [];
     }
   }
-  input.push(tempStr);
+  input.push(temp);
 } catch (error) {
   console.log(error, "Error reading from file!");
 }
@@ -25,12 +24,15 @@ const Customs = (form) => {
   for (let i = 0; i < form.length; i++) {
     // Then loop our array of acceptable chars, if string contains char increment sum
     for (let j = 0; j < form[i].length; j++) {
-      // Populate hashtable
-      if (form[i][j] in answerDict) {
-        continue;
-      } else answerDict[form[i][j]] = 1;
+      // Calculate sum for each string in array
+      for (let k = 0; k < form[i][j].length; k++) {
+        if (form[i][j][k] in answerDict) {
+          answerDict[form[i][j][k]] += 1;
+        } else answerDict[form[i][j][k]] = 1;
+      }
     }
-    sum += Object.values(answerDict).reduce((a, b) => a + b);
+    sum += Object.values(answerDict).filter((count) => count === form[i].length)
+      .length;
     answerDict = {};
   }
   return sum;
