@@ -10,7 +10,6 @@ function bubbleSort(array) {
         [array[i], array[i + 1]] = [array[i + 1], array[i]];
         sorted = false;
       } else if (array[i] <= array[i + 1]) {
-        // Increment pointers, but don't swap
         continue;
       }
     }
