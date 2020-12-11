@@ -18,4 +18,4 @@ function insertionSort(array) {
   }
   return sorted;
 }
-console.log(insertionSort([8, 5, 2, 9, 5, 6, 3]));
+console.log(insertionSort([2, 5, 7, 3, 1, 0, 9, 14]));
