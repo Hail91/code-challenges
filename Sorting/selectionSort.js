@@ -14,3 +14,12 @@
 // console.log(selectionSort([2, 5, 7, 1, 4, 3, 9, 6, 10]));
 
 // ^^ Above implemention works but is not a proper selectionSort, will rewrite to only use one array.
+
+const selectionSort = (array) => {
+  // Use sliding window to slice array and slice to grab the minimum value
+  // unshift the min value to the front of array
+  // Move the window and repeat.
+  // Do this until array is sorted.
+};
+
+console.log(selectionSort([2, 5, 7, 1, 4, 3, 9, 6, 10]));
