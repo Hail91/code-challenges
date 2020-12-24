@@ -1,4 +1,4 @@
-// Selection Sort here...
+// Selection Sort here... (wonder if we can accomplish this without creating a window inside the array)
 const selectionSort = (array) => {
   // Loop input array
   for (let i = 0; i < array.length; i++) {
