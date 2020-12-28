@@ -2,30 +2,30 @@ function smallestDifference(arrayOne, arrayTwo) {
   // Sort arrays
   arrayOne = arrayOne.sort((a, b) => a - b);
   arrayTwo = arrayTwo.sort((a, b) => a - b);
-  // Use pointer method
-  // Start both pointers at same place in each sorted array
-  let pointerOne = 0;
-  let pointerTwo = 0;
-  let diff;
-  while (
-    pointerOne <= arrayOne.length - 1 &&
-    pointerTwo <= arrayTwo.length - 1
-  ) {
-    if (Math.abs(arrayOne[pointerOne] - arrayTwo[pointerTwo]) === 0) {
-      break;
-    } else {
-      if (diff < Math.abs(arrayOne[pointerOne] - arrayTwo[pointerTwo + 1])) {
-        break;
-      }
-      if (diff < Math.abs(arrayOne[pointerOne + 1] - arrayTwo[pointerTwo])) {
-        break;
-      } else if (arrayOne[pointerOne] > arrayTwo[pointerTwo]) pointerTwo += 1;
-      else pointerOne += 1;
+  // Establish pointers
+  let firstP = 0;
+  let secondP = 0;
+  // Establish smallest difference and current difference
+  let smallestDiff = Infinity;
+  let currentDiff;
+  let result = [];
+  // Loop until one of the pointers reaches the end of it's respective array
+  while (firstP < arrayOne.length && secondP < arrayTwo.length) {
+    let first = arrayOne[firstP];
+    let second = arrayTwo[secondP];
+    if (first < second) {
+      currentDiff = second - first;
+      firstP++;
+    } else if (second < first) {
+      currentDiff = first - second;
+      secondP++;
+    } else return [first, second];
+    if (smallestDiff > currentDiff) {
+      smallestDiff = currentDiff;
+      result = [first, second];
     }
-    // Check diff from curr Diff
-    diff = Math.abs(arrayOne[pointerOne] - arrayTwo[pointerTwo]);
   }
-  return [arrayOne[pointerOne], arrayTwo[pointerTwo]];
+  return result;
 }
 
 console.log(
