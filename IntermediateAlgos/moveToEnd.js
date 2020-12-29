@@ -7,3 +7,9 @@ function moveElementToEnd(array, toMove) {
   return array.reverse();
 }
 console.log(moveElementToEnd([2, 1, 2, 2, 2, 3, 4, 2], 2));
+
+// Another more concise way to do this is with inBuilt Sort
+function moveElementToEndConcise(array, toMove) {
+  return array.sort((a, b) => (a === toMove ? 0 : -1));
+}
+console.log(moveElementToEndConcise([2, 1, 2, 2, 2, 3, 4, 2], 2));
