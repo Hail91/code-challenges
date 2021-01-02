@@ -58,9 +58,6 @@ function threeNumberSum(array, targetSum) {
   }
   return result;
 }
-
-console.log(threeNumberSum([12, 3, 1, 2, -6, 5, -8, 6], 0));
-
 console.log(
   threeNumberSum(
     [
