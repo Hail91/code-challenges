@@ -42,9 +42,11 @@
 function threeNumberSum(array, targetSum) {
   array.sort((a, b) => a - b);
   let result = [];
-  for (let i = 0; i < array.length; i++) {
-    let fast = i + 1;
-    let slow = array.length - 1;
+  for (
+    let i = 0, fast = i + 1, slow = array.length - 1;
+    i < array.length;
+    i++
+  ) {
     while (fast < slow) {
       let sum = array[i] + array[fast] + array[slow];
       if (sum == targetSum) {
