@@ -1,7 +1,12 @@
 // For each array element, multiply the remaining elements and return in an output array of the same length
 // Complexities
 // ------------
-// Time: O(n)
+// Time: O(n^2)?
+// Push: O(1)
+// Slice: O(n)
+// Reduce: O(n) best case
+// Splice: O(n)
+// -------------------------
 // Space: O(n)
 function arrayOfProducts(array) {
   let count = 0;
