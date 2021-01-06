@@ -17,5 +17,19 @@ foreach($files as $file) {
     }
 };
 }
-// Call function
-readFoldersAndFiles('../');
+// readFoldersAndFiles('../');
+/* -------------------------
+   Simple function to read a file
+*/
+function read_File($file) {
+    $openedFile = fopen($file, 'r');
+    // Loop the $openedFile until we've hit the end of the file
+    while(!feof($openedFile)) {
+        $fileLine = fgets($openedFile);
+        print_r($fileLine);
+    }
+    echo "\n";
+    echo "\n";
+    echo "End of File!";
+}
+read_File("../Utility/validDate.php");
