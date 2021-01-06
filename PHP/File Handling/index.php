@@ -32,4 +32,17 @@ function read_File($file) {
     echo "\n";
     echo "End of File!";
 }
-read_File("../Utility/validDate.php");
+// read_File("../Utility/validDate.php");
+/* Other functions to read files into either a string or an array */
+function read_file_into_string($file) : string {
+    $file_as_string = file_get_contents($file);
+    echo $file_as_string;
+    return $file_as_string;
+}
+// read_file_into_string("../Utility/validDate.php");
+
+function read_file_into_array($file) : array {
+    $file_as_array = file($file);
+    return $file_as_array;
+}
+read_file_into_array("../Utility/validDate.php");
