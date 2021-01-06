@@ -40,9 +40,9 @@ function read_file_into_string($file) : string {
     return $file_as_string;
 }
 // read_file_into_string("../Utility/validDate.php");
-
 function read_file_into_array($file) : array {
     $file_as_array = file($file);
+    print_r($file_as_array);
     return $file_as_array;
 }
-read_file_into_array("../Utility/validDate.php");
+// read_file_into_array("../Utility/validDate.php");
