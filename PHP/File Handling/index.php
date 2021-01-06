@@ -46,3 +46,13 @@ function read_file_into_array($file) : array {
     return $file_as_array;
 }
 // read_file_into_array("../Utility/validDate.php");
+
+// =====================================================
+function write_to_file($file) {
+    print_r(file_get_contents($file));
+    $new_file = fopen($file, 'w');
+    fwrite($new_file, "echo 'Just wrote to the file!'");
+    fclose($new_file);
+    print_r(file_get_contents($file));
+}
+// write_to_file("../Utility/validDate.php");
