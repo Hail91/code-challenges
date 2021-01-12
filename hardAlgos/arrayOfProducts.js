@@ -26,4 +26,4 @@ function arrayOfProducts(array) {
   return output;
 }
 
-console.log(arrayOfProducts([5, 1, 4, 2]));
+console.log(arrayOfProducts([5, 1, 4, 2, 2]));
