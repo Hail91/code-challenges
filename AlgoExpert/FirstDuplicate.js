@@ -1,13 +1,21 @@
 function firstDuplicateValueHash(array) {
+  // Instantiate hashtable
   let DuplicateHash = {};
+  // Loop over array in O(n) fashion
   for (let i = 0; i < array.length; i++) {
+    // If hashtable contains the value
     if (array[i] in DuplicateHash) {
+      // increment the number of occurences
       DuplicateHash[array[i]] += 1;
+      // If that value has occurred a second time
       if (DuplicateHash[array[i]] == 2) {
+        // Simply return that value
         return array[i];
       }
+      // Otherwise set occurrences to 1 since it's the first time we've found it, then keep looping
     } else DuplicateHash[array[i]] = 1;
   }
+  // Return -1 if no duplicates found
   return -1;
 }
 console.log(firstDuplicateValueHash([2, 1, 5, 2, 3, 3, 4]));
