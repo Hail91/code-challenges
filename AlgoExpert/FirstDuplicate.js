@@ -18,6 +18,7 @@ function firstDuplicateValueHash(array) {
   // Return -1 if no duplicates found
   return -1;
 }
+// Log output
 console.log(firstDuplicateValueHash([2, 1, 5, 2, 3, 3, 4]));
 
 // Alternative solution using O(1) space
