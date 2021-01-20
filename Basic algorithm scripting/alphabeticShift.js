@@ -20,4 +20,5 @@ function alphabeticShift(inputString) {
       .join("")
   );
 }
+// Log output
 console.log(alphabeticShift("crazy"));

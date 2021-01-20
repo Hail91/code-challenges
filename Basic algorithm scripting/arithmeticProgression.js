@@ -5,8 +5,10 @@ var canMakeArithmeticProgression = function (arr) {
   let diff = arr[1] - arr[0];
   // Loop array and check for that value between every array pair
   for (let i = 0; i < arr.length - 1; i++) {
+    // If the next pair doesn't meet established diff, return false
     if (arr[i + 1] - arr[i] !== diff) return false;
   }
+  // If we make it all the way though, return true
   return true;
 };
 
