@@ -4,15 +4,20 @@ function alphabeticShift(inputString) {
     String.fromCharCode(i + 65).toLowerCase()
   );
   // Simplify return into chained return
-  return inputString
-    .split("")
-    .map((char, index) => {
-      if (char === "z") {
-        return (char = "a");
-      } else {
-        return (char = alpha[alpha.indexOf(char) + 1]);
-      }
-    })
-    .join("");
+  return (
+    inputString
+      // Split into array
+      .split("")
+      // Map over array
+      .map((char, index) => {
+        // If the character is z, switch with 'a' since we're shifting right by 1.
+        if (char === "z") {
+          return (char = "a");
+          // Otherwise just reassign the character to the character to the right by 1
+        } else return (char = alpha[alpha.indexOf(char) + 1]);
+      })
+      // Join back into single string
+      .join("")
+  );
 }
 console.log(alphabeticShift("crazy"));
