@@ -6,7 +6,7 @@ function findElement(arr, func) {
     // Set num to the current value --> arr[i]
     num = arr[i];
     // If the value is even (passed into func)
-    if (func(num) === true) {
+    if (func(num)) {
       // Return it
       return num;
     }
