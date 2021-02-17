@@ -23,4 +23,10 @@ function absoluteValuesSumMinimization(array) {
   );
 }
 // Log output
-console.log(absoluteValuesSumMinimization([2, 4, 7]));
+// console.log(absoluteValuesSumMinimization([2, 4, 7]));
+
+function absoluteValuesSumMinimizationRefactor(Array) {
+  return Array[Math.ceil(Array.length / 2) - 1];
+}
+
+console.log(absoluteValuesSumMinimizationRefactor([2, 4, 7, 9, 10, 14, 15]));
