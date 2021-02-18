@@ -7,9 +7,9 @@ function getIndexToIns(arr, num) {
     valIndex = 0;
     return valIndex;
     // Otherwise, if num is greater than last value in array(since it's sorted)
-  } else if (num > Math.max(...arr)) {
+  } else if (num >= arr[arr.length - 1]) {
     // Insert in last position (current index of largest + 1)
-    valIndex = arr.indexOf(Math.max(...arr)) + 1;
+    valIndex = arr.length;
     return valIndex;
   }
   // Loop over sorted input array
@@ -19,7 +19,7 @@ function getIndexToIns(arr, num) {
     if (num > arr[i] && num < arr[i + 1]) {
       valIndex = arr.indexOf(arr[i]) + 1;
       return valIndex;
-    } else if (num === arr[i] && num < arr[i + 1]) {
+    } else if (num <= arr[i] && num < arr[i + 1]) {
       valIndex = arr.indexOf(arr[i]);
       return valIndex;
     }
@@ -28,4 +28,4 @@ function getIndexToIns(arr, num) {
   }
 }
 // Log output
-console.log(getIndexToIns([2, 5, 10], 15));
+console.log(getIndexToIns([2, 5, 10], 10));
