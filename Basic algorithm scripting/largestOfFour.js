@@ -1,5 +1,7 @@
 function largestOfFour(arr) {
+  // Return result of Mapped over input array (returns array)
   return arr.map((element) => {
+    // Return largest element from nested subArray
     return Math.max(...element);
   });
 }
