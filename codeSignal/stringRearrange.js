@@ -1,19 +1,32 @@
 function stringsRearrangement(inputArray) {
-  let results = [];
-  createPermutations(inputArray, []);
-  function createPermutations(inputArray, tempArray) {
-    // If the inputArray has been emptied, push the temporary array permutation we generated to result
-    if (!inputArray.length) results.push(tempArray);
-    // Loop over inputArray
-    for (let i = 0; i < inputArray.length; i++) {
-      // Remove each value from inputArray and store
-      let x = array.splice(i, 1)[0];
-      // Call function recursively passing in the updated inputArray and the updated Temporary array
-      createPermutations(inputArray, tempArray.concat(x));
-      // add element x to inputArray starting at 'i'
-      inputArray.splice(i, 0, x);
+  let bruteForce = function(depth, inputArray) {
+    let swap = function(i, j) {
+      tmp = inputArray[i];
+      inputArray[i] = inputArray[j];
+      inputArray[j] = tmp;
+    };
+    if (depth === inputArray.length) {
+      for (let i = 0; i < inputArray.length - 1; i++) {
+        let differences = 0;
+        for (let j = 0; j < inputArray[i].length; j++) {
+          if (inputArray[i][j] !== inputArray[i + 1][j]) {
+            differences++;
+          }
+        }
+        if (differences !== 1) {
+          return false;
+        }
+      }
+      return true;      
     }
-  }
-  /* TO DO....*/
-  // Iterate over results checking for differences between strings in each subArray
+    for (let i = depth; i < inputArray.length; i++) {
+      bruteForce(depth, i);
+      if (bruteForce(depth + 1, inputArray)) {
+        return true;
+      }
+      swap(depth, 1);
+    }
+    return false;
+  };
+  return bruteForce(0, inputArray);    
 }
