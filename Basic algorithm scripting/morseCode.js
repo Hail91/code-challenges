@@ -55,6 +55,4 @@ const uniqueMorseRepresentations = function (words) {
   return result.size;
 };
 // Log output
-console.log(
-  uniqueMorseRepresentations(["noilq", "kzlq", "ydreq", "ybxk", "kzlq"])
-);
+console.log(uniqueMorseRepresentations(["gin", "zen", "gig", "msg"]));
