@@ -1,4 +1,5 @@
 const uniqueMorseRepresentations = function (words) {
+  // Establish hashmap to hold morse code translations
   let translationDict = {};
   // Copy over array of morse code translations
   let morseCode = [
@@ -44,13 +45,16 @@ const uniqueMorseRepresentations = function (words) {
       words[j][s] = translationDict[words[j][s]];
     }
   }
+  // Join the generated morse representations and place into array
   let finalWords = words.map((el) => {
     return el.join("");
   });
+  // Convert to set to remove duplicates
   let result = new Set(finalWords);
+  // return number of unique words based on morse representation
   return result.size;
 };
-
+// Log output
 console.log(
   uniqueMorseRepresentations(["noilq", "kzlq", "ydreq", "ybxk", "kzlq"])
 );
