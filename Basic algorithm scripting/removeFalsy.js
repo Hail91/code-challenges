@@ -1,8 +1,8 @@
 function bouncer(arr) {
-  let newArr = arr.filter((el) => {
+  return arr.filter((el) => {
+    // Filter returns only values that evalutate to truthy by default
     return el;
   });
-  return newArr;
 }
-
-bouncer([7, "ate", "", false, 9]);
+// Log output
+console.log(bouncer([7, "ate", "", false, 9]));
