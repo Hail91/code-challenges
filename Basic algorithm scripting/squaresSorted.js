@@ -1,13 +1,13 @@
-// var sortedSquares = function (A) {
-//   A.forEach((el, index, arr) => {
-//     return (arr[index] = Math.pow(el, 2));
-//   });
-//   return A.sort((a, b) => a - b);
-// };
-// // Log output
-// console.log(sortedSquares([-4, -1, 0, 3, 10]));
+var sortedSquares = function (A) {
+  A.forEach((el, index, arr) => {
+    return (arr[index] = Math.pow(el, 2));
+  });
+  return A.sort((a, b) => a - b);
+};
+// Log output
+console.log(sortedSquares([-4, -1, 0, 3, 10]));
 
-function sortedSquares(array) {
+function sortedSquaresFaster(array) {
   const output = [];
   let leftPointer = 0,
     rightPointer = array.length - 1,
@@ -26,4 +26,4 @@ function sortedSquares(array) {
   return output;
 }
 // Log output
-console.log(sortedSquares([-4, -1, 0, 3, 10]));
+console.log(sortedSquaresFaster([-4, -1, 0, 3, 10]));
