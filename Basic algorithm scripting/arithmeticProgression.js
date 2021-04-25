@@ -8,8 +8,7 @@ var canMakeArithmeticProgression = function (arr) {
     // If the next pair doesn't meet established diff, return false
     if (arr[i + 1] - arr[i] !== diff) return false;
   }
-  // If we make it all the way though, return true
   return true;
 };
-
+// Log output
 console.log(canMakeArithmeticProgression([3, 5, 1]));
