@@ -1,9 +1,8 @@
 function booWho(bool) {
-  if (typeof bool === "boolean") {
-    return true;
-  } else {
-    return false;
-  }
+  // Check type in guard clause
+  if (typeof bool !== "boolean") return false;
+  // Return true if not a boolean
+  return true;
 }
-
+// Log output
 booWho(null);
