@@ -5,4 +5,4 @@ function booWho(bool) {
   return true;
 }
 // Log output
-booWho(null);
+console.log(booWho(1));

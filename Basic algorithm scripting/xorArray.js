@@ -5,5 +5,5 @@ const xorOperation = function (n, start) {
   }
   return nums.reduce((a, b) => a ^ b);
 };
-
+// Log output
 console.log(xorOperation(4, 3));
