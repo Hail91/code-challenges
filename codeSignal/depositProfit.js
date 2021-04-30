@@ -8,5 +8,5 @@ function depositProfit(deposit, rate, threshold) {
   }
   return years;
 }
-// Log output
+// Log output...
 console.log(depositProfit(100, 20, 170));
