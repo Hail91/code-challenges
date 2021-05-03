@@ -1,3 +1,4 @@
+// Good luck explaining this one. LOL
 function absoluteValuesSumMinimization(array) {
   let absVal;
   let hashmap = {};
