@@ -1,13 +1,7 @@
 const numberOfMatches = function (n) {
-  let winnerDeclared = false;
   let matchesPlayed = 0;
   // While the winner is not declared
-  while (!winnerDeclared) {
-    // If one team is left, we've found a winner
-    if (n === 1) {
-      winnerDeclared = true;
-      break;
-    }
+  while (n !== 1) {
     if (n % 2 === 0) {
       // Cut out half the teams
       n = n / 2;
@@ -25,4 +19,4 @@ const numberOfMatches = function (n) {
   return matchesPlayed;
 };
 // Log output
-console.log(numberOfMatches(7));
+console.log(numberOfMatches(14));
