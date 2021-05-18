@@ -1,4 +1,4 @@
-// Time Complexity: O(n) worst case where n is the length of the coins array
+// Time Complexity: O(nLogn) worst case where n is the length of the coins array
 // Space Complexity: O(1) constant space, sort occurs in-place and we use a variable to track output
 function nonConstructibleChange(coins) {
   let currentChange = 0;
