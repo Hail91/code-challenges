@@ -1,3 +1,4 @@
+/* BRUTE FORCE */
 function sortArray(array) {
   let currOdd, currOddIdx;
   // Iterate through array
