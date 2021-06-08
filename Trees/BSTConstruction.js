@@ -68,7 +68,7 @@ class BST {
           this.left = this.right.left;
           this.right = this.right.right;
         } else {
-          // DO nothing
+          // Do nothing
         }
       } else if (parent.left === this) {
         parent.left = this.left !== null ? this.left : this.right;
