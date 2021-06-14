@@ -14,5 +14,5 @@ function evenDigitsOnly(number) {
   });
   return result;
 }
-
+// Log output
 console.log(evenDigitsOnly(2422682));

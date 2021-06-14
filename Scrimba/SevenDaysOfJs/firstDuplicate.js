@@ -16,5 +16,5 @@ function firstDuplicate(nums) {
   // If no duplicates are found, return -1
   return -1;
 }
-
+// Log output
 console.log(firstDuplicate([1, 2, 3, 4, 3]));

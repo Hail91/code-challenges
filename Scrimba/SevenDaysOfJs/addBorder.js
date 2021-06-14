@@ -29,4 +29,5 @@ function addBorder(array) {
 //     return array;
 // }
 
+// Log output
 console.log(addBorder(["abc", "ded"]));

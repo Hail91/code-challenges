@@ -16,5 +16,5 @@ function makeArrayConsecutive(nums) {
   }
   return total;
 }
-
+// Log output
 console.log(makeArrayConsecutive([6, 2, 3, 8]));
