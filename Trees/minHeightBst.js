@@ -14,6 +14,20 @@ function minHeightBst(array, node = null, start = 0, end = array.length - 1) {
   return node;
 }
 
+// Much prefer this solution as it makes more sense to me assigning the bst left/right children to return of recursive calls
+function minHeightBst(array, start = 0, end = array.length - 1) {
+  // Need some kind of base case for the recursion
+  if (end < start) return null;
+  // Find middle point in input array for each iteration
+  let middle = Math.floor((start + end) / 2);
+  let node = new BST(array[middle]);
+  // Call recursively on left and then right sides
+  node.left = minHeightBst(array, start, middle - 1);
+  node.right = minHeightBst(array, middle + 1, end);
+  // Then return
+  return node;
+}
+
 class BST {
   constructor(value) {
     this.value = value;
