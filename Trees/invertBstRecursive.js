@@ -1,4 +1,3 @@
-// Recursive solution using less space with continued time efficiency
 function invertBinaryTree(tree) {
   if (tree === null) return;
   // Swap left and right

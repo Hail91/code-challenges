@@ -3,8 +3,9 @@ function invertBinaryTree(tree) {
   let queue = [tree];
   // While Queue is not empty
   while (queue.length > 0) {
-    // Pop node off stack and store in variable
+    // Pop node off queue
     let currentNode = queue.shift();
+    // Skip iteration on null
     if (currentNode === null) continue;
     // Perform swap of the currentNode's children
     swapChildren(currentNode);
@@ -15,7 +16,6 @@ function invertBinaryTree(tree) {
 }
 
 function swapChildren(treeNode) {
-  // Store treeNode.left in variable because we will need to reassign AFTER it has been swapped
   let leftNode = treeNode.left;
   treeNode.left = treeNode.right;
   treeNode.right = leftNode;
