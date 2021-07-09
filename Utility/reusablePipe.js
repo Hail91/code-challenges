@@ -5,10 +5,15 @@ const pipe =
     fns.reduce((value, fn) => fn(value), argument);
 // Assign pipe function with chained functions to calculateProfit
 const calculateProfit = pipe(
+  // Called first on 50,000
   (value) => value * (1 - 0.88),
+  // Called on returned value from 1st call above
   (value) => value * (1 - 0.15),
+  // Called on returned value from 2nd call above
   (value) => value + 2500,
+  // Called on returned value from 3rd call above
   (value) => value / 3
+  // Return final result to profit var on line 21
 );
 // Initial value of 50,000
 const revenue = 50_000;
