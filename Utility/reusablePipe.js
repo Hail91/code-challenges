@@ -1,4 +1,4 @@
-// Reusable Pipe function in JS
+// Reusable Pipe function in JS, Useful for chaining function calls where you need the result of the prev calculation for the next calc
 const pipe =
   (...fns) =>
   (argument) =>
