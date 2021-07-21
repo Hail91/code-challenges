@@ -22,6 +22,22 @@ const data = {
   weapon: "Candlestick",
 };
 const { room, weapon } = data;
+/* End */
 
-console.log(room, weapon);
+/* Destructuring in a loop */
+const testData = [
+  {
+    name: "Rusty",
+    color: "Orange",
+  },
+  {
+    name: "Miss Scarlet",
+    color: "Red",
+  },
+];
+
+for (let i = 0; i < testData.length; ++i) {
+  i === 0 ? (firstVar = testData[i]) : (secondVar = testData[i]);
+}
+console.log(firstVar, secondVar);
 /* End */
