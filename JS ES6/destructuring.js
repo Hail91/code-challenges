@@ -3,10 +3,18 @@
 /* Variable declarations */
 
 /* The target on left | The source on right */
+
+// Array destructuring
 var [first, second] = [true, false];
 let [first, second] = [true, false];
 const [first, second] = [true, false];
 
-// Assignment
+// Object destructuring
+var { first, second } = { first: 0, second: 1 };
+let { first, second } = { first: 0, second: 1 };
+const { first, second } = { first: 0, second: 1 };
 
+// Array Assignment
 [first, second] = [true, false];
+// Object Assignment
+let { first, second } = { first: 0, second: 1 };
