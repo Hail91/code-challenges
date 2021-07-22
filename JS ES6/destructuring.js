@@ -7,8 +7,8 @@
 // Array destructuring
 let [first, second] = [true, false];
 
-// Object destructuring
-let { firstObj, secondObj } = { first: 0, second: 1 };
+// Object destructuring (Maps aren't ordered, so it works off of matching property names)
+let { firstObj, secondObj } = { firstObj: 0, secondObj: 1 };
 
 // Array Assignment
 [first, second] = [true, false];
