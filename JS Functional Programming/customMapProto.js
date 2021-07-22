@@ -14,7 +14,7 @@ Array.prototype.myMap = function (callback) {
   return newArray;
 };
 // Test functionality
-let new_s = s.myMap(function (item) {
+let new_s = originalArr.myMap(function (item) {
   return item * 2;
 });
 // Log result
