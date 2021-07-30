@@ -34,3 +34,21 @@ console.log(
   exampleThreeStrings,
   "Examples executing Math operations on JUST strings"
 );
+
+/* CAVEAT is when using the addition operation (+), examples below... */
+let examplewithAdditionOperator = "2" + 2;
+let examplewithAdditionOperatorTwo = "2" + "2";
+let examplewithAdditionOperatorThree = 2 + "2";
+// Log output
+console.log(
+  examplewithAdditionOperator,
+  examplewithAdditionOperatorTwo,
+  examplewithAdditionOperatorThree,
+  "Adding strings and numbers"
+);
+
+/* 
+    The above example differs in that we're using the addition operator, strings in JavaScript DO have a default behavior with regard to the '+' operator...and that is concatenation. Internally, when
+    JavaScript encounters '+' when dealing with either strings or a combination of strings and numbers...it will call toPrimitive on the number and then call valueOf internally. This will almost always
+    result in the result of a string concat after the number is coerced to a string, all 3 calls above should return the string '22'.
+*/
