@@ -52,3 +52,18 @@ console.log(
     JavaScript encounters '+' when dealing with either strings or a combination of strings and numbers...it will call toPrimitive on the number and then call valueOf internally. This will almost always
     result in the result of a string concat after the number is coerced to a string, all 3 calls above should return the string '22'.
 */
+
+// CHALLENGES
+
+function isValidName(name) {
+  // If the name argument is a string and it contains no whitespace with a length >= 3...return true
+  if (typeof name == "string" && name.trim().length >= 3) {
+    return true;
+  }
+  // Otherwise return false
+  return false;
+}
+
+function hoursAttended() {
+  return null;
+}
