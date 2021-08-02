@@ -54,7 +54,6 @@ console.log(
 */
 
 // CHALLENGES
-
 function isValidName(name) {
   // If the name argument is a string and it contains no whitespace with a length >= 3...return true
   if (typeof name == "string" && name.trim().length >= 3) {
@@ -63,14 +62,18 @@ function isValidName(name) {
   // Otherwise return false
   return false;
 }
-
 function hoursAttended(attended, length) {
+  // If typeof attended is a string and it exists
   if (typeof attended == "string" && attended.trim() !== "") {
+    // Explicity coerce to a number
     attended = Number(attended);
   }
+  // If typeof length is a string and it exists
   if (typeof length == "string" && length.trim() !== "") {
+    // Explicity coerce to a Number
     length = Number(length);
   }
+  // If both arguments are numbers and they both have a length greater than or equal to zero with attended being < length...
   if (
     typeof attended == "number" &&
     typeof length == "number" &&
@@ -80,7 +83,10 @@ function hoursAttended(attended, length) {
     Number.isInteger(length) &&
     attended <= length
   ) {
+    // Return true
     return true;
   }
+  // Else return false
   return false;
 }
+// End
