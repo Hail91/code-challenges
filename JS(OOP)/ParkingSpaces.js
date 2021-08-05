@@ -4,6 +4,7 @@
  * @param {number} small
  */
 const ParkingSystem = function (big, medium, small) {
+  // Assign local properties to passed arguments
   (this.big = big),
     (this.medium = medium),
     (this.small = small),
@@ -11,6 +12,7 @@ const ParkingSystem = function (big, medium, small) {
      * @param {number} carType
      * @return {boolean}
      */
+    // Define a method on the object.prototype
     (ParkingSystem.prototype.addCar = function (carType) {
       // Save this in a variable to make it reference parent object.
       let _this = this;
