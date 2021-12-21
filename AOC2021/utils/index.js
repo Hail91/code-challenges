@@ -5,7 +5,7 @@ const conversionMap = new Map([["integer", parseInt]]);
 
 export const getInputString = (relPath) => {
   // read the input file
-  const inputStr = fs.readFileSync("../day2/input.txt", "utf-8");
+  const inputStr = fs.readFileSync("../day3/input.txt", "utf-8");
   return inputStr;
 };
 
